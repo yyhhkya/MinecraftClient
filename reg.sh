@@ -1,2 +1,2 @@
-echo {{PASSWORD}}
-./MinecraftClient-20230623-225-linux-x64 $1 - www.mcyly.top:10111 "/reg {{PASSWORD}} {{PASSWORD}}"
+sed -i 's/{{USERNAME}}/'"$1"'/g' reg.sh
+./MinecraftClient-20230623-225-linux-x64 reg.ini
