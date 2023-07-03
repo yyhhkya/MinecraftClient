@@ -10,9 +10,6 @@ on:
       ssh:
         description: 'SSH connection to Actions'
 
-env:
-  PASSWOLD: ${{ secrets.PASSWOLD }}
-
 jobs:
   run-script:
     runs-on: ubuntu-latest
@@ -25,4 +22,6 @@ jobs:
       run: chmod 777 MinecraftClient-20230623-225-linux-x64
 
     - name: 启动
+      env:
+        PASSWOLD: ${{ secrets.PASSWOLD }}
       run: ./MinecraftClient-20230623-225-linux-x64 hiwer.ini
