@@ -18,5 +18,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Run shell script
-      run: bash run.sh
+    - name: 赋予权限
+      uses: chmod 777 MinecraftClient-20230623-225-linux-x64
+
+    - name: 启动
+      run: ./MinecraftClient-20230623-225-linux-x64 isyyo.ini
