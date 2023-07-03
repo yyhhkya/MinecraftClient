@@ -9,7 +9,10 @@ on:
     inputs:
       ssh:
         description: 'SSH connection to Actions'
-        
+
+env:
+  PASSWOLD: ${{ secrets.PASSWOLD }}
+
 jobs:
   run-script:
     runs-on: ubuntu-latest
