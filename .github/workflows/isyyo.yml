@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
 
 jobs:
   run-script:
