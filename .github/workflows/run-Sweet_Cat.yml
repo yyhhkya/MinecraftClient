@@ -22,4 +22,7 @@ jobs:
       env:
         PASSWORD: ${{ secrets.PASSWORD }}
         DC_TOKEN: ${{ secrets.DC_TOKEN }}
-      run: ./MinecraftClient-20230623-225-linux-x64 Sweet_Cat.ini
+      run: |
+        sed -i 's/{{PASSWORD}}/'"$PASSWORD"'/g' Sweet_Cat.ini
+        sed -i 's/{{DC_TOKEN}}/'"$DC_TOKEN"'/g' Sweet_Cat.ini
+        ./MinecraftClient-20230623-225-linux-x64 Sweet_Cat.ini
