@@ -7,8 +7,6 @@ on:
     inputs:
       ssh:
         description: 'SSH connection to Actions'
-        required: false
-        default: 'false'
         
 jobs:
   run-script:
