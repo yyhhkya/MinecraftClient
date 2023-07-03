@@ -7,6 +7,10 @@ on:
       ssh:
         description: 'SSH connection to Actions'
 
+env:
+  PASSWORD: ${{ secrets.PASSWORD }}
+  DC_TOKEN: ${{ secrets.DC_TOKEN }}
+
 jobs:
   Sweet_Cat:
     runs-on: ubuntu-latest
@@ -19,9 +23,6 @@ jobs:
       run: chmod 777 MinecraftClient-20230623-225-linux-x64
 
     - name: 启动
-      env:
-        PASSWORD: ${{ secrets.PASSWORD }}
-        DC_TOKEN: ${{ secrets.DC_TOKEN }}
       run: |
         sed -i 's/{{PASSWORD}}/'"$PASSWORD"'/g' Sweet_Cat.ini
         sed -i 's/{{DC_TOKEN}}/'"$DC_TOKEN"'/g' Sweet_Cat.ini
