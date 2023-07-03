@@ -1,4 +1,4 @@
-name: isyyo
+name: hiwer
 on:
   push:
     branches:
@@ -20,4 +20,4 @@ jobs:
       run: chmod 777 MinecraftClient-20230623-225-linux-x64
 
     - name: 启动
-      run: ./MinecraftClient-20230623-225-linux-x64 isyyo.ini
+      run: ./MinecraftClient-20230623-225-linux-x64 hiwer.ini
