@@ -1,4 +1,4 @@
-name: hiwer
+name: Sweet_Cat
 on:
   schedule:
     - cron: '0 0,6,12,18 * * *'
@@ -8,7 +8,7 @@ on:
         description: 'SSH connection to Actions'
 
 jobs:
-  run-script:
+  Sweet_Cat:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,4 +22,4 @@ jobs:
       env:
         PASSWORD: ${{ secrets.PASSWORD }}
         DC_TOKEN: ${{ secrets.DC_TOKEN }}
-      run: ./MinecraftClient-20230623-225-linux-x64 hiwer.ini
+      run: ./MinecraftClient-20230623-225-linux-x64 Sweet_Cat.ini
