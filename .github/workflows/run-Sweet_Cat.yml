@@ -1,4 +1,4 @@
-name: Sweet_Cat
+name: urine
 on:
   schedule:
     - cron: '0 0,6,12,18 * * *'
@@ -12,7 +12,7 @@ env:
   DC_TOKEN: ${{ secrets.DC_TOKEN }}
 
 jobs:
-  Sweet_Cat:
+  urine:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,6 +24,6 @@ jobs:
 
     - name: 启动
       run: |
-        sed -i 's/{{PASSWORD}}/'"$PASSWORD"'/g' Sweet_Cat.ini
-        sed -i 's/{{DC_TOKEN}}/'"$DC_TOKEN"'/g' Sweet_Cat.ini
-        ./MinecraftClient-20230623-225-linux-x64 Sweet_Cat.ini
+        sed -i 's/{{PASSWORD}}/'"$PASSWORD"'/g' urine.ini
+        sed -i 's/{{DC_TOKEN}}/'"$DC_TOKEN"'/g' urine.ini
+        ./MinecraftClient-20230623-225-linux-x64 urine.ini
