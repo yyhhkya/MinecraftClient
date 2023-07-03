@@ -11,7 +11,7 @@ on:
         description: 'SSH connection to Actions'
 
 env:
-  PASSWOLD: ${{ secrets.PASSWORD }}
+  PASSWORD: ${{ secrets.PASSWORD }}
 
 jobs:
   run-script:
