@@ -12,7 +12,7 @@ env:
   DC_TOKEN: ${{ secrets.DC_TOKEN }}
 
 jobs:
-  urine:
+  job:
     runs-on: ubuntu-latest
 
     steps:
