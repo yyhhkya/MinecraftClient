@@ -16,6 +16,6 @@ jobs:
       - run: |
           chmod 777 MinecraftClient-20231120-234-linux-x64
           chmod 777 reg.sh
-          sed -i 's/{{PASSWORD}}/'"$PASSWORD"'/g' reg.sh
+          sed -i 's/{{PASSWORD}}/'"$PASSWORD"'/g' reg.ini
       - name: Setup Debug Session
         uses: csexton/debugger-action@master
