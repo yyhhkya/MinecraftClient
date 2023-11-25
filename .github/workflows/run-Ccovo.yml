@@ -1,4 +1,4 @@
-name: urine
+name: Ccovo
 on:
 #   schedule:
 #     - cron: '0 0,6,12,18 * * *'
@@ -24,6 +24,6 @@ jobs:
 
     - name: 启动
       run: |
-        sed -i 's/{{PASSWORD}}/'"$PASSWORD"'/g' urine.ini
-        sed -i 's/{{DC_TOKEN}}/'"$DC_TOKEN"'/g' urine.ini
-        ./MinecraftClient-20231120-234-linux-x64 urine.ini
+        sed -i 's/{{PASSWORD}}/'"$PASSWORD"'/g' Ccovo.ini
+        sed -i 's/{{DC_TOKEN}}/'"$DC_TOKEN"'/g' Ccovo.ini
+        ./MinecraftClient-20231120-234-linux-x64 Ccovo.ini
