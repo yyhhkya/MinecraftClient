@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          chmod 777 MinecraftClient-20230623-225-linux-x64
+          chmod 777 MinecraftClient-20231120-234-linux-x64
           chmod 777 reg.sh
           sed -i 's/{{PASSWORD}}/'"$PASSWORD"'/g' reg.sh
       - name: Setup Debug Session
