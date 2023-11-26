@@ -7,7 +7,7 @@ on:
 
 env:
   USERNAME: 0Lin # 玩家ID
-  ChannelId: 1178205955486396438 # DC频道ID
+  ChannelId: '1178205955486396438' # DC频道ID
   PASSWORD: ${{ secrets.PASSWORD }}
   DC_TOKEN: ${{ secrets.DC_TOKEN }}
 
