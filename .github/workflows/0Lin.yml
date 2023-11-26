@@ -19,11 +19,14 @@ jobs:
     - name: 初始化
       uses: actions/checkout@v2
 
+    - name: 信息
+      run: |
+        echo 登录: $USERNAME
+        echo DC频道ID: $ChannelId
+
     - name: 赋予权限
       run: |
         chmod 777 MinecraftClient-20231120-234-linux-x64
-        echo 登录: $USERNAME
-        echo DC频道ID: $ChannelId
 
     - name: 启动
       run: |
