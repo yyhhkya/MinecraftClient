@@ -1,4 +1,4 @@
-name: 登录-${{ runner.name }}
+name: 登录-${{ GITHUB_WORKFLOW }}
 on:
   workflow_dispatch:
     inputs:
