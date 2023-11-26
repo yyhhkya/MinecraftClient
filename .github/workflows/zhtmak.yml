@@ -7,6 +7,7 @@ on:
 
 env:
   USERNAME: zhtmak # 玩家ID
+  ChannelId: '1125368447551942739' # DC频道ID
   PASSWORD: ${{ secrets.PASSWORD }}
   DC_TOKEN: ${{ secrets.DC_TOKEN }}
 
@@ -18,14 +19,19 @@ jobs:
     - name: 初始化
       uses: actions/checkout@v2
 
+    - name: 信息
+      run: |
+        echo 登录: $USERNAME
+        echo DC频道ID: $ChannelId
+
     - name: 赋予权限
       run: |
         chmod 777 MinecraftClient-20231120-234-linux-x64
-        echo 登录: $USERNAME
 
     - name: 启动
       run: |
         sed -i 's/{{USERNAME}}/'"$USERNAME"'/g' mcc.ini
         sed -i 's/{{PASSWORD}}/'"$PASSWORD"'/g' mcc.ini
         sed -i 's/{{DC_TOKEN}}/'"$DC_TOKEN"'/g' mcc.ini
+        sed -i 's/{{ChannelId}}/'"$ChannelId"'/g' mcc.ini
         ./MinecraftClient-20231120-234-linux-x64 mcc.ini
