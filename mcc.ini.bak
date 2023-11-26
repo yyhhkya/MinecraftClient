@@ -351,7 +351,7 @@ Filter = "messages"
 Enabled = true
 Token = "{{DC_TOKEN}}"               # 你的Discord机器人的令牌。
 GuildId = 1125368447551942736               # 你邀请机器人加入的服务器ID。
-ChannelId = {{ChannelId}}             # 你想要使机器人与 MCC 交互的频道ID。
+ChannelId = 1125368447551942739             # 你想要使机器人与 MCC 交互的频道ID。
 OwnersIds = [ 1024256297543139328, ]         # 你希望能够使用机器人与 MCC 交互的用户ID列表。
 Message_Send_Timeout = 3                    # 如果信息无法被发送至Discord时，要等候多少秒才取消发送。（最小 1 秒）
 # 消息格式
