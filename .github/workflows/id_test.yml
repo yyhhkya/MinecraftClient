@@ -1,4 +1,4 @@
-name: 登录-${{ filename }}
+name: 登录-${filename}
 on:
   workflow_dispatch:
     inputs:
