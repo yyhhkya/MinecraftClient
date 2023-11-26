@@ -23,6 +23,7 @@ jobs:
       run: |
         chmod 777 MinecraftClient-20231120-234-linux-x64
         echo 登录: $USERNAME
+        echo DC频道ID: $ChannelId
 
     - name: 启动
       run: |
