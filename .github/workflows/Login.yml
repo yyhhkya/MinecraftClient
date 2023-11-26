@@ -6,7 +6,7 @@ on:
         description: 'SSH connection to Actions'
 
 env:
-  USERNAME: 0Lin # 玩家ID
+  USERNAME: ${{ runner.name }} # 玩家ID
   PASSWORD: ${{ secrets.PASSWORD }}
   DC_TOKEN: ${{ secrets.DC_TOKEN }}
 
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: 初始化 - $USERNAME
+    - name: 初始化
       uses: actions/checkout@v2
 
     - name: 赋予权限
