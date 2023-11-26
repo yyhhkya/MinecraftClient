@@ -1,4 +1,4 @@
-name: Login
+name: zhtmak
 on:
   workflow_dispatch:
     inputs:
@@ -6,7 +6,7 @@ on:
         description: 'SSH connection to Actions'
 
 env:
-  USERNAME: ${{ runner.name }} # 玩家ID
+  USERNAME: zhtmak # 玩家ID
   PASSWORD: ${{ secrets.PASSWORD }}
   DC_TOKEN: ${{ secrets.DC_TOKEN }}
 
@@ -21,10 +21,11 @@ jobs:
     - name: 赋予权限
       run: |
         chmod 777 MinecraftClient-20231120-234-linux-x64
-        echo $USERNAME
+        echo 登录: $USERNAME
 
-    # - name: 启动
-    #   run: |
-    #     sed -i 's/{{PASSWORD}}/'"$PASSWORD"'/g' zhtmak.ini
-    #     sed -i 's/{{DC_TOKEN}}/'"$DC_TOKEN"'/g' zhtmak.ini
-    #     ./MinecraftClient-20231120-234-linux-x64 zhtmak.ini
+    - name: 启动
+      run: |
+        sed -i 's/{{USERNAME}}/'"$USERNAME"'/g' mcc.ini
+        sed -i 's/{{PASSWORD}}/'"$PASSWORD"'/g' mcc.ini
+        sed -i 's/{{DC_TOKEN}}/'"$DC_TOKEN"'/g' mcc.ini
+        ./MinecraftClient-20231120-234-linux-x64 mcc.ini
