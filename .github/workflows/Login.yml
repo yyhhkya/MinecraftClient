@@ -1,4 +1,4 @@
-name: 登录-${{ GITHUB_WORKFLOW }}
+name: Login
 on:
   workflow_dispatch:
     inputs:
@@ -6,11 +6,12 @@ on:
         description: 'SSH connection to Actions'
 
 env:
+  USERNAME: 0Lin # 玩家ID
   PASSWORD: ${{ secrets.PASSWORD }}
   DC_TOKEN: ${{ secrets.DC_TOKEN }}
 
 jobs:
-  job:
+  $USERNAME:
     runs-on: ubuntu-latest
 
     steps:
