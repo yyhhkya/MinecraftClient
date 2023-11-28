@@ -1,0 +1,40 @@
+name: yyhhkya
+on:
+  # schedule:
+  #   - cron: '0 0,6,12,18 * * *'
+  workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+
+env:
+  USERNAME: yyhhkya # 玩家ID
+  ChannelId: '1178980470843781240' # DC频道ID
+  PASSWORD: ${{ secrets.Yy_PASSWORD }}
+  DC_TOKEN: ${{ secrets.DC_TOKEN }}
+
+jobs:
+  job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 初始化
+      uses: actions/checkout@v2
+
+    - name: 信息
+      run: |
+        echo 登录: $USERNAME
+        echo DC频道ID: $ChannelId
+
+    - name: 赋予权限
+      run: |
+        chmod 777 MinecraftClient-20231120-234-linux-x64
+        chmod 777 login.sh
+
+    - name: 启动
+      run: |
+        sed -i 's/{{USERNAME}}/'"$USERNAME"'/g' mcc.ini
+        sed -i 's/{{PASSWORD}}/'"$PASSWORD"'/g' mcc.ini
+        sed -i 's/{{DC_TOKEN}}/'"$DC_TOKEN"'/g' mcc.ini
+        sed -i 's/{{ChannelId}}/'"$ChannelId"'/g' mcc.ini
+        ./login.sh
