@@ -23,6 +23,7 @@ jobs:
 
     - name: 信息
       run: |
+        echo 登录IP: $(curl ifconfig.me)
         echo 登录: $USERNAME
         echo DC频道ID: $ChannelId
 
