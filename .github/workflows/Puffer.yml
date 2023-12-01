@@ -1,4 +1,4 @@
-name: zhtmak
+name: Puffer
 on:
   schedule:
     - cron: '0 0,6,12,18 * * *'
@@ -8,7 +8,7 @@ on:
         description: 'SSH connection to Actions'
 
 env:
-  USERNAME: zhtmak # 玩家ID
+  USERNAME: Puffer # 玩家ID
   ChannelId: '1125368447551942739' # DC频道ID
   PASSWORD: ${{ secrets.PASSWORD }}
   DC_TOKEN: ${{ secrets.DC_TOKEN }}
