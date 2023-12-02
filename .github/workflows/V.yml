@@ -28,8 +28,8 @@ jobs:
 
     - name: 启动
       run: |
-        sed -i 's/{{USERNAME}}/'"$USERNAME"'/g' mcc.ini
-        sed -i 's/{{PASSWORD}}/'"$PASSWORD"'/g' mcc.ini
-        sed -i 's/{{DC_TOKEN}}/'"$DC_TOKEN"'/g' mcc.ini
-        sed -i 's/{{ChannelId}}/'"$ChannelId"'/g' mcc.ini
+        sed -i 's/{{USERNAME}}/'"$USERNAME"'/g' V_mcc.ini
+        sed -i 's/{{PASSWORD}}/'"$PASSWORD"'/g' V_mcc.ini
+        sed -i 's/{{DC_TOKEN}}/'"$DC_TOKEN"'/g' V_mcc.ini
+        sed -i 's/{{ChannelId}}/'"$ChannelId"'/g' V_mcc.ini
         ./login.sh
