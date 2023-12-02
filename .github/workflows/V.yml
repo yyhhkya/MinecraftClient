@@ -24,7 +24,7 @@ jobs:
     - name: 赋予权限
       run: |
         chmod 777 MinecraftClient-20231120-234-linux-x64
-        chmod 777 login.sh
+        chmod 777 V_login.sh
 
     - name: 启动
       run: |
