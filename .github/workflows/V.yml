@@ -1,4 +1,4 @@
-name: 456789
+name: V
 on:
   schedule:
     - cron: '0 0,6,12,18 * * *'
@@ -8,9 +8,9 @@ on:
         description: 'SSH connection to Actions'
 
 env:
-  USERNAME: 456789 # 玩家ID
+  USERNAME: ${{ secrets.V_USERNAME }} # 玩家ID
   ChannelId: '1125368447551942739' # DC频道ID
-  PASSWORD: ${{ secrets.PASSWORD }}
+  PASSWORD: ${{ secrets.V_PASSWORD }}
   DC_TOKEN: ${{ secrets.DC_TOKEN }}
 
 jobs:
@@ -20,12 +20,6 @@ jobs:
     steps:
     - name: 初始化
       uses: actions/checkout@v2
-
-    - name: 信息
-      run: |
-        echo 登录IP: $(curl ifconfig.me)
-        echo 登录: $USERNAME
-        echo DC频道ID: $ChannelId
 
     - name: 赋予权限
       run: |
