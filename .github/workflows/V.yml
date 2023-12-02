@@ -9,7 +9,7 @@ on:
 
 env:
   USERNAME: ${{ secrets.V_USERNAME }} # 玩家ID
-  ChannelId: '1125368447551942739' # DC频道ID
+  ChannelId: '1180503067997769748' # DC频道ID
   PASSWORD: ${{ secrets.PASSWORD }}
   DC_TOKEN: ${{ secrets.DC_TOKEN }}
 
