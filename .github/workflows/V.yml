@@ -32,4 +32,4 @@ jobs:
         sed -i 's/{{PASSWORD}}/'"$PASSWORD"'/g' V_mcc.ini
         sed -i 's/{{DC_TOKEN}}/'"$DC_TOKEN"'/g' V_mcc.ini
         sed -i 's/{{ChannelId}}/'"$ChannelId"'/g' V_mcc.ini
-        ./login.sh
+        ./V_login.sh
