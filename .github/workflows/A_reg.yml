@@ -17,6 +17,6 @@ jobs:
       - run: |
           chmod 777 MinecraftClient-20231120-234-linux-x64
           chmod 777 reg.sh
-          sed -i 's/{{DC_TOKEN}}/'"$DC_TOKEN"'/g' reg.ini
+          sed -i 's/{{DC_TOKEN}}/'"$DC_TOKEN"'/g' reg.sh
       - name: Setup Debug Session
         uses: csexton/debugger-action@master
