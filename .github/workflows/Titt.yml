@@ -1,4 +1,4 @@
-name: yyhhkya
+name: Titt
 on:
   # schedule:
   #   - cron: '0 0,6,12,18 * * *'
@@ -8,7 +8,7 @@ on:
         description: 'SSH connection to Actions'
 
 env:
-  USERNAME: yyhhkya # 玩家ID
+  USERNAME: Titt # 玩家ID
   ChannelId: '1178980470843781240' # DC频道ID
   PASSWORD: ${{ secrets.Yy_PASSWORD }}
   DC_TOKEN: ${{ secrets.DC_TOKEN }}
