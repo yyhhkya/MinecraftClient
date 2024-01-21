@@ -10,7 +10,8 @@ on:
 env:
   USERNAME: Titt # 玩家ID
   ChannelId: '1178980470843781240' # DC频道ID
-  PASSWORD: ${{ secrets.Yy_PASSWORD }}
+  # PASSWORD: ${{ secrets.Yy_PASSWORD }}
+  PASSWORD: ${{ secrets.PASSWORD }}
   DC_TOKEN: ${{ secrets.DC_TOKEN }}
 
 jobs:
